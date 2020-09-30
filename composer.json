@@ -1,6 +1,7 @@
 {
     "name": "maggz69/flutterwave",
     "description": "A laravel package that allows you to process payouts through flutterwave",
+    "license": "MIT"
     "authors": [
         {
             "name": "pius",
