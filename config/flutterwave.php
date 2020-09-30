@@ -2,7 +2,7 @@
 
 return [
     'keys'=> [
-        'public_key'=> env('FLUTTERWAVE_PUBLIC_KEY', null),
+        'secret_key'=> env('FLUTTERWAVE_PUBLIC_KEY', null),
     ],
     'urls'=> [
         'base_url'=> 'https://api.ravepay.co/',
