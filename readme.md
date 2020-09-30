@@ -22,7 +22,7 @@ php artisan vendor:publish --tag=config
 ```
 Add The Flutterwave `API_KEY` to your .env file
  
- ##Usage
+## Usage
  
  ```php
 
