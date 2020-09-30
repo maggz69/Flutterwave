@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="79e313ca-d0a6-4adc-b905-fd86389b26db" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable path="composer" />
+    </execution>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-client" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1hnVGmc8i2VDlvgPs2DY00YvGwW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="COPY_ALWAYS" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="79e313ca-d0a6-4adc-b905-fd86389b26db" name="Default Changelist" comment="" />
+      <created>1600646749885</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600646749885</updated>
+      <workItem from="1600646751003" duration="3062000" />
+      <workItem from="1600789534143" duration="196000" />
+      <workItem from="1600848676319" duration="2483000" />
+      <workItem from="1600981965958" duration="1149000" />
+      <workItem from="1601199494764" duration="6416000" />
+      <workItem from="1601481711900" duration="1112000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="446" y="89" key="#com.intellij.ide.util.MemberChooser" timestamp="1600851026245">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="446" y="89" key="#com.intellij.ide.util.MemberChooser/0.0.1280.800@0.0.1280.800" timestamp="1600851026245" />
+    <state x="266" y="393" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1601481844469">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="266" y="393" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.800/1280.-110.1920.1080@0.0.1280.800" timestamp="1601481844469" />
+    <state x="1679" y="432" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1280.726/1280.-87.1920.1057@1280.-87.1920.1057" timestamp="1601386422095" />
+    <state x="1907" y="320" key="ComposerInitDialogKey" timestamp="1601201002590">
+      <screen x="1280" y="-87" width="1920" height="1057" />
+    </state>
+    <state x="1907" y="320" key="ComposerInitDialogKey/0.23.1280.725/1280.-87.1920.1057@1280.-87.1920.1057" timestamp="1601201002590" />
+    <state x="1879" y="89" key="NewPhpClassDialog" timestamp="1601386757897">
+      <screen x="1280" y="-87" width="1920" height="1057" />
+    </state>
+    <state x="399" y="133" key="NewPhpClassDialog/0.0.1280.800@0.0.1280.800" timestamp="1600850975585" />
+    <state x="1879" y="89" key="NewPhpClassDialog/0.23.1280.726/1280.-87.1920.1057@1280.-87.1920.1057" timestamp="1601386757897" />
+    <state x="461" y="330" key="NewPhpFileDialog" timestamp="1600647889542">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="461" y="330" key="NewPhpFileDialog/0.0.1280.800@0.0.1280.800" timestamp="1600647889542" />
+    <state x="485" y="181" key="refactoring.ChangeSignatureDialog" timestamp="1600982688944">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="485" y="181" key="refactoring.ChangeSignatureDialog/0.0.1280.800@0.0.1280.800" timestamp="1600982688944" />
+    <state x="1738" y="57" width="1005" height="913" key="search.everywhere.popup" timestamp="1601202052952">
+      <screen x="1280" y="-110" width="1920" height="1080" />
+    </state>
+    <state x="1738" y="57" width="1005" height="913" key="search.everywhere.popup/0.0.1280.800/1280.-110.1920.1080@1280.-110.1920.1080" timestamp="1601202052952" />
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1600982334420" />
+  </component>
+</project>

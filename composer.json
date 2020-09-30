@@ -1,0 +1,27 @@
+{
+    "name": "maggz69/flutterwave",
+    "description": "A laravel package that allows you to process payouts through flutterwave",
+    "authors": [
+        {
+            "name": "pius",
+            "email": "swagzmania@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Flutterwave\\Payouts\\": "src/"
+        }
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^7.0.1",
+        "php": "^7.3"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Flutterwave\\Payouts\\FlutterwaveServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}
