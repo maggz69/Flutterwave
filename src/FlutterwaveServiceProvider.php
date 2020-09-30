@@ -1,20 +1,19 @@
 <?php
 
-
 namespace Flutterwave\Payouts;
 
 use Illuminate\Support\ServiceProvider;
 
-
 class FlutterwaveServiceProvider extends ServiceProvider
 {
-    public function boot(){
+    public function boot()
+    {
         $this->publishes([
             __DIR__.'/flutterwave.php' => config_path('flutterwave.php'),
-        ],'config');
+        ], 'config');
     }
 
-    public function register(){
-
+    public function register()
+    {
     }
 }
