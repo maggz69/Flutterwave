@@ -1,4 +1,4 @@
-##Flutterwave Laravel Package
+### Flutterwave Laravel Package
 
 This is a laravel package that allows you to access 
 and utilize the Flutterwave API from a laravel application.
