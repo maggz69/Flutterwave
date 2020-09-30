@@ -14,7 +14,6 @@ class ResponsePad
 
     public function __construct($response)
     {
-
         $body = self::getArrayResponseBody($response);
 
         $this->status = self::getStatus($body);
@@ -26,7 +25,6 @@ class ResponsePad
     public static function getArrayResponseBody(ResponseInterface $response)
     {
         return json_decode($response->getBody()->getContents(), true);
-
     }
 
     public static function getStatus(array $body)
@@ -40,6 +38,7 @@ class ResponsePad
                 return $body['status'];
             }
         }
+
         return null;
     }
 
@@ -48,6 +47,7 @@ class ResponsePad
         if (array_key_exists('message', $body)) {
             return $body['message'];
         }
+
         return nullOrEmptyString();
     }
 
@@ -58,6 +58,7 @@ class ResponsePad
 
     /**
      * @param string $body
+     *
      * @return array
      */
     public static function getData(string $body): array
@@ -65,13 +66,12 @@ class ResponsePad
         if (array_key_exists('data', $body)) {
             return $body['data'];
         }
+
         return [];
     }
 
     public static function parseResponse(ResponseInterface $response)
     {
         $body = self::getBodyInJson($response);
-
     }
-
 }
