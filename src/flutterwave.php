@@ -10,3 +10,4 @@ return [
         "instance" => env("FLUTTERWAVE_INSTANCE", "production")
     ]
 ];
+

@@ -6,7 +6,6 @@ use Exception;
 use Flutterwave\Payouts\Dummy\DummyData;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
-use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Psr7\Request;
 use Psr\Http\Message\ResponseInterface;
 use Str;
@@ -16,7 +15,6 @@ class NetworkChef
     private array $config;
     private Request $request;
 
-
     private string $secret_key;
 
     private string $endpoint;
@@ -25,21 +23,21 @@ class NetworkChef
     private int $lastResponseCode;
     private ResponseInterface $lastResponse;
     private array $lastResponsePad;
+
     /**
      * @return int
-     * 
+     *
      * get the last w3 request code as returned from the server
-     * 
      */
-    public function getLastResponseCode():int
+    public function getLastResponseCode(): int
     {
         return $this->lastResponseCode;
     }
 
     /**
      * @return ResponseInterface
-     * 
-     * get the last GuzzleHttp Response 
+     *
+     * get the last GuzzleHttp Response
      */
     public function getLastResponse()
     {
@@ -48,16 +46,15 @@ class NetworkChef
 
     /**
      * @return ResponsePad
-     * 
+     *
      * get a simplified formatted array containing the request in a simple way that can be used
      */
     public function getLastResponsePad()
     {
         return $this->lastResponsePad;
     }
+
     private $request_body;
-
-
 
     /**
      * NetworkChef constructor.
@@ -85,14 +82,13 @@ class NetworkChef
      */
     public function setEndpoint($endpoint): void
     {
-        if (Str::contains($endpoint, ":")) {
-            $parts = explode(":", $endpoint);
+        if (Str::contains($endpoint, ':')) {
+            $parts = explode(':', $endpoint);
             $this->setAction($parts[0]);
             $this->endpoint = $parts[1];
         } else {
             $this->endpoint = $endpoint;
         }
-
     }
 
     public function setAction(string $action)
@@ -168,17 +164,15 @@ class NetworkChef
             return $this->lastResponsePad;
         }
 
-
-
     }
 
     private function createFormattedUrl(...$parts): string
     {
-        $finalString = "";
+        $finalString = '';
 
         foreach ($parts as $urlPart) {
-            $urlPart = trim($urlPart, "/");
-            $finalString .= $urlPart . "/";
+            $urlPart = trim($urlPart, '/');
+            $finalString .= $urlPart.'/';
         }
 
         return $finalString;
@@ -187,8 +181,8 @@ class NetworkChef
     private function getHeaders(): array
     {
         return [
-            "Authorization" => 'Bearer ' . $this->secret_key,
-            "Accept" => "Application/Json"
+            'Authorization' => 'Bearer '.$this->secret_key,
+            'Accept'        => 'Application/Json',
         ];
     }
 }

@@ -6,19 +6,13 @@ use Exception;
 use Flutterwave\Payouts\Exceptions\FlutterwaveActionsMalformedException;
 use Flutterwave\Payouts\FlutterwaveActionsPreChecker;
 use Flutterwave\Payouts\NetworkChef;
-use Flutterwave\Payouts\RequiredFieldsForBody;
 use Flutterwave\Payouts\Rules\RequiredFields;
 
 /**
- * Class TransferToBank
- * @package Flutterwave\Payouts\Actions
- *
- * B2C Customer Transactions
- *
+ * Class TransferToBank.
  */
 class TransferToBank extends NetworkChef implements FlutterwaveActionsPreChecker
 {
-
     // The ENDPOINT that is going to be hit by the API as well
     // as the METHOD being used to hit the endpoint
     protected const ENDPOINT = 'POST:transfers';
@@ -27,15 +21,14 @@ class TransferToBank extends NetworkChef implements FlutterwaveActionsPreChecker
     {
         if (isset($config)) {
             parent::__construct($config);
-        }else{
+        } else {
             $config = [
-                'base_url'=>config('flutterwave.base_url'),
-                'api_version'=>config('flutterwave.api_version'),
+                'base_url'   => config('flutterwave.base_url'),
+                'api_version'=> config('flutterwave.api_version'),
 
             ];
             parent::__construct($config);
         }
-
 
         if (isset($body)) {
             $this->setRequestBody($body);
@@ -55,22 +48,20 @@ class TransferToBank extends NetworkChef implements FlutterwaveActionsPreChecker
     public function checkRequestBodyFilled()
     {
         if ($this->getRequestBody() == null) {
-            throw new FlutterwaveActionsMalformedException("Request Body Is Missing");
+            throw new FlutterwaveActionsMalformedException('Request Body Is Missing');
         }
     }
 
     public function checkRequiredFieldsFilled(): bool
     {
-        $requiredFieldsArray = explode(",", RequiredFields::requiredFieldsForClass(get_class($this)));
+        $requiredFieldsArray = explode(',', RequiredFields::requiredFieldsForClass(get_class($this)));
 
         foreach ($requiredFieldsArray as $requiredField) {
             if (!array_key_exists($requiredField, $this->getRequestBody())) {
-                throw new Exception("Missing Required Field :" . $requiredField);
+                throw new Exception('Missing Required Field :'.$requiredField);
             }
         }
 
         return true;
     }
-
-
 }
