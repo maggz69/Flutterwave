@@ -129,41 +129,42 @@ class NetworkChef
 
     private function buildCompleteUri()
     {
-        if(Str::lower(config('flutterwave.environment.instance',null)) != 'production'){
-            $this->lastResponsePad = json_decode(DummyData::payoutResponse(),true);
+        if (Str::lower(config('flutterwave.environment.instance', null)) != 'production') {
+            $this->lastResponsePad = json_decode(DummyData::payoutResponse(), true);
 
             return $this->lastResponsePad;
-        }elseif(Str::lower(config('flutterwave.environment.instance',null)) === 'production'){
+        } elseif (Str::lower(config('flutterwave.environment.instance', null)) === 'production') {
             $client = new Client();
+
             try {
                 $response = $client->request(
                     $this->action,
                     $this->createFormattedUrl(
                         $this->config['base_url'],
-                        $this->config['api_version'], $this->endpoint),
+                        $this->config['api_version'],
+                        $this->endpoint
+                    ),
                     [
                         'headers' => $this->getHeaders(),
-                        'json' => $this->request_body
+                        'json'    => $this->request_body,
                     ],
                 );
                 $this->lastResponsePad = ResponsePad::getArrayResponseBody($response);
                 $this->lastResponse = $response;
-            }catch (ClientException $exception){
+            } catch (ClientException $exception) {
                 $response = $exception->getResponse();
                 $this->lastResponse = $response;
                 $this->lastResponsePad = ResponsePad::getArrayResponseBody($response);
-            }catch (Exception $exception){
+            } catch (Exception $exception) {
                 $message = $exception->getMessage();
 
                 throw new Exception($message);
             }
 
-
             $this->lastResponseCode = $this->lastResponse->getStatusCode();
 
             return $this->lastResponsePad;
         }
-
     }
 
     private function createFormattedUrl(...$parts): string
