@@ -20,7 +20,7 @@ Publish The Config File
 ```php
 php artisan vendor:publish --tag=config
 ```
-Add The Flutterwave `API_KEY` to your .env file
+Add The Flutterwave `API_KEY` to your .env file. It should have the name *FLUTTERWAVE_SECRET_KEY*
  
 ## Usage
  
@@ -46,3 +46,5 @@ dd($response);
 
 
 ```
+## Simulating Responses
+In order to test the making payouts, add the following to your .env file *FLUTTERWAVE_INSTANCE=test*. This will simulate a transaction and return an array as the package would in a live instance. The dummy data is the same sample data that is recieved from the documents on the flutterwave portal.
